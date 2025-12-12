@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>TeamRF - Guia</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="container">
+  <div class="header"><img src="images/logo.svg" alt="TeamRF logo"/><div>
+  <h1 class="h1">TeamRF - Monte sua dieta</h1>
+  <div class="small">Use a calculadora para estimar calorias e macros e veja exemplos práticos.</div>
+  </div></div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Calculadora</h3>
+      <label class="small">Peso (kg)</label><input id="weight" type="number" value="75" style="width:100%;padding:8px;border-radius:8px;margin:6px 0;background:#000;color:#fff;border:1px solid #222"/>
+      <label class="small">Fator de atividade (1.4 sedentário - 1.8 ativo)</label>
+      <input id="activity" type="number" step="0.05" value="1.55" style="width:100%;padding:8px;border-radius:8px;margin:6px 0;background:#000;color:#fff;border:1px solid #222"/>
+      <div class="small" style="margin-top:6px">Objetivo:</div>
+      <label class="small"><input type="radio" name="goal" value="bulking" checked/> Bulking</label>
+      <label class="small" style="margin-left:8px"><input type="radio" name="goal" value="cutting"/> Cutting</label>
+      <label class="small" style="margin-left:8px"><input type="radio" name="goal" value="recomp"/> Recomp</label>
+      <a id="calcBtn" class="btn" href="#" onclick="event.preventDefault()">Calcular</a>
+      <div style="margin-top:10px">
+        <div id="maintenance" class="small">—</div>
+        <div id="targetCalories" class="small">—</div>
+        <div id="macros" class="small">—</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Exemplos & Guia</h3>
+      <div class="small">Baixe o Guia completo em PDF ou navegue pelo site:</div>
+      <div style="display:flex;gap:8px;margin-top:10px">
+        <a class="btn" href="TeamRF-Guia.pdf" download>Baixar PDF</a>
+        <a class="btn" href="select_gender.html">Entrar</a>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:12px">
+        <img src="images/before.svg" alt="antes" style="width:48%;border-radius:8px"/>
+        <img src="images/after.svg" alt="depois" style="width:48%;border-radius:8px"/>
+      </div>
+    </div>
+  </div>
+
+  <div id="meals" style="margin-top:18px"></div>
+
+  <div class="footer">TeamRF • Use as informações como guia. Não substitui avaliação profissional.</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
